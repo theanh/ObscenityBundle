@@ -1,0 +1,29 @@
+{
+    "name" : "ObscenityBundle",
+    "description" : "Obscenity is a profanity filter bundle",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "The Anh",
+        "email" : "theanh@gmail.com"
+    }],
+    "keywords" : [
+        "Obscenity bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+    },
+    "autoload" : {
+        "psr-2" : {
+            "Talu\\ObscenityBundle" : "src/"
+        }
+    },
+    "target-dir" : "",
+    "repositories" : [{}],
+    "extra" : {
+    "branch-alias" : {
+            "dev-master" : ""
+        }
+    }
+}
