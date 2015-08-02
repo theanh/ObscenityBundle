@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * PHP Array for common words
+ */
 array_push($badwords,
     'affanculo',
     'bagascia',
@@ -385,7 +387,6 @@ array_push($badwords,
     'verga',
     'zorra',
     'zorron',
-    '',
     '"ass-fucker"',
     'asses',
     'assfukka',

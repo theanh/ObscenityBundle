@@ -5,11 +5,9 @@ namespace Talu\ObscenityBundle;
 class Obscenity
 {
     private $blacklist = [];
-    private $whitelist = [];
 
     public function __construct() {
-		// $this->replacer = '*';
-		// $this->setDictionary('en-us');
+		$this->setDictionary('blacklist');
 	}
 
 	/**
@@ -21,14 +19,10 @@ class Obscenity
 	 *  string
 	 */
 	public function setDictionary($dictionary = 'blacklist') {
-        $badwords = array();
+        $badwords = [];
 
         if (file_exists(__DIR__ . DIRECTORY_SEPARATOR .'dict/international.php')) {
             include(__DIR__ . DIRECTORY_SEPARATOR .'dict/international.php');
-        } else {
-            // if the file isn't in the dict directory,
-            // it's probably a custom user library
-            include('international.php');
         }
 
 		$this->dictionary = $dictionary;
@@ -37,20 +31,11 @@ class Obscenity
 			for ($x=0; $x < count($this->dictionary); $x++) {
 				if (file_exists(__DIR__ . DIRECTORY_SEPARATOR .'dict/'.$this->dictionary[$x].'.php')) {
 					include(__DIR__ . DIRECTORY_SEPARATOR .'dict/'.$this->dictionary[$x].'.php');
-				} else {
-					// if the file isn't in the dict directory,
-					// it's probably a custom user library
-					include($this->dictionary[$x]);
 				}
-
 			}
-
-		// just a single string, not an array
 		} elseif (is_string($this->dictionary)) {
 			if (file_exists(__DIR__ . DIRECTORY_SEPARATOR .'dict/'.$this->dictionary.'.php')) {
 				include(__DIR__ . DIRECTORY_SEPARATOR .'dict/'.$this->dictionary.'.php');
-			} else {
-				include($this->dictionary);
 			}
 		}
 		$this->blacklist = $badwords;
@@ -63,18 +48,13 @@ class Obscenity
 	 *  @param string $text String to be profaned.
 	 *  bool
 	 */
-    public function profane($text){
-        // if($text.length() < )3
-        //     return false;
-
+    public function profane($text)
+    {
         foreach($this->blacklist as $foul){
-            if(preg_match('/\b'.$foul.'\b/i', $text))
+            if(preg_match("/\b$foul\b/i", $text))
                 return true;
         }
 
         return false;
     }
 }
-
-$ob = new Obscenity();
-print_r($ob->setDictionary());
