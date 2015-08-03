@@ -18,9 +18,9 @@ class Obscenity
     /**
      *  Sets the dictionar(y|ies) to use
      *  This can accept a string to a language file path,
-     *  or an array of strings to multiple paths
+     *  or an array of strings to multiple paths.
      *
-     *  @param		string/array
+     *  @param string/array
      *  string
      */
     public function setDictionary($dictionary = 'blacklist')

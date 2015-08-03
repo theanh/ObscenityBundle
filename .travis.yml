@@ -13,5 +13,5 @@ before_script:
   - travis_retry composer install --no-interaction --prefer-source
 
 script:
-  - vendor/phpunit/phpunit/phpunit --coverage-text --coverage-clover=clover.xml
+  - vendor/phpunit/phpunit/phpunit --coverage-text --coverage-clover=clover.xml ./tests
   - vendor/squizlabs/php_codesniffer/scripts/phpcs -p --standard=PSR2 ./src
