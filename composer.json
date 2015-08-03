@@ -13,6 +13,8 @@
         "MIT"
     ],
     "require" : {
+        "php":                           ">=5.3.3",
+        "symfony/framework-bundle":      "~2.4"
     },
     "autoload" : {
         "psr-2" : {
@@ -20,7 +22,7 @@
         }
     },
     "target-dir" : "",
-    "repositories" : [{}],
+    "repositories" : [],
     "extra" : {
     "branch-alias" : {
             "dev-master" : ""
