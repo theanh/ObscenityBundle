@@ -16,6 +16,10 @@
         "php":                           ">=5.3.3",
         "symfony/framework-bundle":      "~2.4"
     },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "~2.0",
+        "phpunit/phpunit": "~4.0"
+    },
     "autoload" : {
         "psr-2" : {
             "Talu\\ObscenityBundle" : "src/"
