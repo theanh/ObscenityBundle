@@ -1,8 +1,10 @@
 <?php
+
 /**
  * PHP Array for common words
  */
-array_push($badwords,
+array_push(
+    $badwords,
     'affanculo',
     'bagascia',
     'bastarda',
