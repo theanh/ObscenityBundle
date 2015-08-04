@@ -5,8 +5,7 @@ namespace Talu\ObscenityBundle;
 class Obscenity
 {
     /**
-     * @var $blacklist.
-     *
+     * @var.
      */
     private $blacklist = [];
 
@@ -27,21 +26,21 @@ class Obscenity
     {
         $badwords = [];
 
-        if (file_exists(__DIR__ . DIRECTORY_SEPARATOR .'dict/international.php')) {
-            include(__DIR__ . DIRECTORY_SEPARATOR .'dict/international.php');
+        if (file_exists(__DIR__.DIRECTORY_SEPARATOR.'dict/international.php')) {
+            include __DIR__.DIRECTORY_SEPARATOR.'dict/international.php';
         }
 
         $this->dictionary = $dictionary;
 
         if (is_array($this->dictionary)) {
-            for ($x=0; $x < count($this->dictionary); $x++) {
-                if (file_exists(__DIR__ . DIRECTORY_SEPARATOR .'dict/'.$this->dictionary[$x].'.php')) {
-                    include(__DIR__ . DIRECTORY_SEPARATOR .'dict/'.$this->dictionary[$x].'.php');
+            for ($x = 0; $x < count($this->dictionary); ++$x) {
+                if (file_exists(__DIR__.DIRECTORY_SEPARATOR.'dict/'.$this->dictionary[$x].'.php')) {
+                    include __DIR__.DIRECTORY_SEPARATOR.'dict/'.$this->dictionary[$x].'.php';
                 }
             }
         } elseif (is_string($this->dictionary)) {
-            if (file_exists(__DIR__ . DIRECTORY_SEPARATOR .'dict/'.$this->dictionary.'.php')) {
-                include(__DIR__ . DIRECTORY_SEPARATOR .'dict/'.$this->dictionary.'.php');
+            if (file_exists(__DIR__.DIRECTORY_SEPARATOR.'dict/'.$this->dictionary.'.php')) {
+                include __DIR__.DIRECTORY_SEPARATOR.'dict/'.$this->dictionary.'.php';
             }
         }
         $this->blacklist = $badwords;
@@ -51,6 +50,7 @@ class Obscenity
 
     /**
      *  Test word by badword.
+     *
      *  @param string $text String to be profaned.
      *  bool
      */
