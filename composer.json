@@ -1,5 +1,5 @@
 {
-    "name": "obscenity-bundle",
+    "name": "talu/obscenity-bundle",
     "type": "symfony-bundle",
     "description": "Obscenity is a profanity filter bundle",
     "keywords": ["obscenity", "filter bad words bundle"],
@@ -25,14 +25,14 @@
     },
     "autoload": {
         "psr-2": {
-            "Talu\\ObscenityBundle": "src/"
+            "talu\\ObscenityBundle": "src/"
         }
     },
     "target-dir": "",
     "repositories": [],
     "extra": {
         "branch-alias": {
-            "dev-master": "v1.0"
+            "dev-master": "master"
         }
     }
 }
