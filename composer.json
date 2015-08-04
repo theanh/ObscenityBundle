@@ -1,5 +1,5 @@
 {
-    "name": "ObscenityBundle",
+    "name": "obscenity-bundle",
     "type": "symfony-bundle",
     "description": "Obscenity is a profanity filter bundle",
     "keywords": ["obscenity", "filter bad words bundle"],
@@ -32,7 +32,7 @@
     "repositories": [],
     "extra": {
         "branch-alias": {
-            "dev-master": ""
+            "dev-master": "v1.0"
         }
     }
 }
