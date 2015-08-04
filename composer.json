@@ -1,35 +1,38 @@
 {
-    "name" : "ObscenityBundle",
-    "description" : "Obscenity is a profanity filter bundle",
-    "type" : "symfony-bundle",
-    "authors" : [{
-        "name" : "The Anh",
-        "email" : "theanh@gmail.com"
+    "name": "ObscenityBundle",
+    "type": "symfony-bundle",
+    "description": "Obscenity is a profanity filter bundle",
+    "keywords": ["obscenity", "filter bad words bundle"],
+    "homepage": "https://github.com/theanh/ObscenityBundle",
+    "authors": [{
+        "name": "The Anh",
+        "email": "theanh@gmail.com",
+        "role": "Developer"
     }],
-    "keywords" : [
+    "keywords": [
         "Obscenity bundle"
     ],
-    "license" : [
+    "license": [
         "MIT"
     ],
-    "require" : {
-        "php":                           ">=5.3.3",
-        "symfony/framework-bundle":      "~2.4"
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.4"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "~2.0",
         "phpunit/phpunit": "~4.0"
     },
-    "autoload" : {
-        "psr-2" : {
-            "Talu\\ObscenityBundle" : "src/"
+    "autoload": {
+        "psr-2": {
+            "Talu\\ObscenityBundle": "src/"
         }
     },
-    "target-dir" : "",
-    "repositories" : [],
-    "extra" : {
-    "branch-alias" : {
-            "dev-master" : ""
+    "target-dir": "",
+    "repositories": [],
+    "extra": {
+        "branch-alias": {
+            "dev-master": ""
         }
     }
 }

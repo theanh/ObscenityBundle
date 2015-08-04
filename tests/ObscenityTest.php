@@ -22,6 +22,7 @@ class ObscenityTest extends \PHPUnit_Framework_TestCase
             [null => false],
             ['hell??' => true],
             ['??hell..//' => true],
+            ['??HELl..//' => true],
             ['fuck' => true],
             ['hello' => false]
         ];

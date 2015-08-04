@@ -5,7 +5,7 @@ namespace Talu\ObscenityBundle;
 class Obscenity
 {
     /**
-     * @var.
+     * @var $blacklist.
      */
     private $blacklist = [];
 
