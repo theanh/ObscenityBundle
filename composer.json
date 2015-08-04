@@ -24,8 +24,15 @@
         "phpunit/phpunit": "~4.0"
     },
     "autoload": {
-        "psr-4": {
-            "talu\\ObscenityBundle": "src/"
+        "psr-0": {
+            "Talu\\ObscenityBundle": "src/"
+        }
+    },
+    "target-dir": "",
+    "repositories": [],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
         }
     }
 }
