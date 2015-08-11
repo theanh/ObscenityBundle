@@ -16,12 +16,12 @@
         "MIT"
     ],
     "require": {
-        "php": ">=5.3.3",
-        "symfony/framework-bundle": "~2.4"
+        "php": ">=5.3.3"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "~2.0",
-        "phpunit/phpunit": "~4.0"
+        "phpunit/phpunit": "~4.0",
+        "symfony/framework-bundle": "~2.4"
     },
     "autoload": {
         "psr-0": {
@@ -29,10 +29,5 @@
         }
     },
     "target-dir": "",
-    "repositories": [],
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0"
-        }
-    }
+    "repositories": []
 }
